@@ -29,5 +29,11 @@ namespace ApiTempo.Controllers
             })
             .ToArray();
         }
+
+        [HttpGet("GetNew")]
+        public List<string> GetNew()
+        {
+            return Enumerable.Range(1, 10).Select(index => $"New {index}").ToList();
+        }
     }
 }
